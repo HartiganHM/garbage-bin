@@ -19,3 +19,5 @@ const createNewItem = async newItem => {
     throw new Error('Error adding new trash to garage-bin.');
   }
 };
+
+export default createNewItem;
