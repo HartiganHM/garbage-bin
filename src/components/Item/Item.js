@@ -2,7 +2,7 @@ import React from 'react';
 import './Item.css';
 
 const Item = props => {
-  const { name, reason, cleanliness } = props.items;
+  const { name, reason, cleanliness } = props.data;
 
   return (
     <div className="Item">
