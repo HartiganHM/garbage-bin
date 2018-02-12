@@ -8,3 +8,5 @@ const fetchAllItems = async () => {
     throw Error(`Error retrieving garage-items: ${error}`);
   }
 };
+
+export default fetchAllItems;
