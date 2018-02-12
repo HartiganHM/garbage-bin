@@ -5,7 +5,7 @@ const fetchItemById = async (itemId) => {
 
     return jsonItem;
   } catch (error) {
-    throw new Error(`Error retrieving item ${itemId} from garage-items: ${error}`;)
+    throw new Error(`Error retrieving item ${itemId} from garage-items: ${error}`);
   }
 };
 
