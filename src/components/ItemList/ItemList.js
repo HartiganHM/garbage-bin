@@ -9,9 +9,10 @@ const ItemList = ({ items }) => {
 
   return (
     <div className="ItemList">
-    <span className="list-header">Check Out Yer Junk!</span>
-      {garageItems}
-    </div>);
+      <span className="list-header">Check Out Yer Junk!</span>
+      <div className="item-container">{garageItems}</div>
+    </div>
+  );
 };
 
 export default ItemList;
