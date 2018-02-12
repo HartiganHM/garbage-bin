@@ -7,7 +7,11 @@ const ItemList = ({ items }) => {
     <Item key={index} data={item} />
   ));
 
-  return <div className="ItemList">{garageItems}</div>;
+  return (
+    <div className="ItemList">
+    <span className="list-header">Check Out Yer Junk!</span>
+      {garageItems}
+    </div>);
 };
 
 export default ItemList;
