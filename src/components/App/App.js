@@ -18,7 +18,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <span className="app-header">Garabge Bin</span>
         <Garage items={this.state.items} />
+        <span className="open-garage">Open</span>
       </div>
     );
   }
