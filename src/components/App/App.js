@@ -8,7 +8,7 @@ class App extends Component {
     super();
     this.state = {
       items: [],
-      isOpen: false
+      isOpen: 'closed'
     }
   }
 
@@ -17,12 +17,18 @@ class App extends Component {
     this.setState({items})
   }
 
+  handleOpen =() => {
+    let isOpen = this.state.isOpen === 'closed' ? 'open' : 'closed';
+
+    this.setState({isOpen})
+  }
+
   render() {
     return (
       <div className="App">
         <span className="app-header">Garage Bin</span>
-        <Garage items={this.state.items} />
-        <span className="open-garage" isOpen={this.state.isOpen}>Open Garage</span>
+        <Garage items={this.state.items} isopen={this.state.isOpen}/>
+        <span onClick={() => this.handleOpen()}className="open-garage">Open Garage</span>
       </div>
     );
   }
