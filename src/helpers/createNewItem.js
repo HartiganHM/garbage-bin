@@ -15,6 +15,8 @@ const createNewItem = async newItem => {
     });
 
     const jsonResponse = addedItem.json();
+
+    return jsonResponse;
   } catch (error) {
     throw new Error('Error adding new trash to garage-bin.');
   }
