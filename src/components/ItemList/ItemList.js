@@ -1,5 +1,6 @@
 import React from 'react';
 import Item from '../Item/Item';
+import AddItemForm from '../AddItemForm/AddItemForm';
 import './ItemList.css';
 
 const ItemList = ({ items }) => {
@@ -11,6 +12,7 @@ const ItemList = ({ items }) => {
     <div className="ItemList">
       <span className="list-header">Check Out Yer Junk!</span>
       <div className="item-container">{garageItems}</div>
+      <AddItemForm />
     </div>
   );
 };
