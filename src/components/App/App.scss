@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'SouthPark';
+  src: url('../../assets/south park.ttf');
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -9,5 +14,6 @@
     repeat: no-repeat;
     size: cover;
   }
+  font-family: 'SouthPark', Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
