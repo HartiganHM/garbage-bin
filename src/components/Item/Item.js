@@ -4,14 +4,14 @@ import './Item.css';
 const Item = props => {
   const { name, reason, cleanliness } = props.data;
 
-  const cleanlinessDropdown = ['Sprakling', 'Dusty', 'Rancid'].map(option => {
+  const cleanlinessDropdown = ['Sprakling', 'Dusty', 'Rancid'].map((option, index) => {
     let isSelected = false;
 
     if (cleanliness === option) {
       isSelected = true;
     }
 
-    return <option value={option} selected={isSelected}>{option}</option>
+    return <option key={index} selected={isSelected}>{option}</option>
   })
 
   return (
