@@ -14,11 +14,12 @@
       image: url('../../assets/garage-door-tile.png');
       size: contain;
     }
+    transition: 0.5s height ease-in-out;
   }
   .closed {
     height: 780px;
   }
   .open {
-    height: 0;
+    height: 0px;
   }
 }
