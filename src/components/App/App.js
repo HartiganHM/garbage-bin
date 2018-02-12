@@ -7,7 +7,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      items: []
+      items: [],
+      isOpen: false
     }
   }
 
@@ -21,7 +22,7 @@ class App extends Component {
       <div className="App">
         <span className="app-header">Garage Bin</span>
         <Garage items={this.state.items} />
-        <span className="open-garage">Open Garage</span>
+        <span className="open-garage" isOpen={this.state.isOpen}>Open Garage</span>
       </div>
     );
   }
