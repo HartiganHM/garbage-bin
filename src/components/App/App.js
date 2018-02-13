@@ -9,35 +9,43 @@ class App extends Component {
     super();
     this.state = {
       items: [],
-      isOpen: 'closed'
-    }
+      isOpen: 'closed',
+      sortOrder: 'A - Z'
+    };
   }
 
-  async componentDidMount () {
+  async componentDidMount() {
     const items = await fetchAllItems();
-    this.setState({items})
+    this.setState({ items });
   }
 
-  handleOpen =() => {
+  handleOpen = () => {
     let isOpen = this.state.isOpen === 'closed' ? 'open' : 'closed';
 
-    this.setState({isOpen})
-  }
+    this.setState({ isOpen });
+  };
 
-  addItemToGarage = (item) => {
+  addItemToGarage = item => {
     const newItem = item;
     const items = [...this.state.items, newItem];
 
     createNewItem(newItem);
-    this.setState({items});
-  }
+    this.setState({ items });
+  };
 
   render() {
     return (
       <div className="App">
         <span className="app-header">Garage Bin</span>
-        <Garage items={this.state.items} isopen={this.state.isOpen} addItem={this.addItemToGarage}/>
-        <span onClick={() => this.handleOpen()}className="open-garage">Open Garage</span>
+        <Garage
+          items={this.state.items}
+          isopen={this.state.isOpen}
+          addItem={this.addItemToGarage}
+          sortOrder={this.state.sortOrder}
+        />
+        <span onClick={() => this.handleOpen()} className="open-garage">
+          Open Garage
+        </span>
       </div>
     );
   }

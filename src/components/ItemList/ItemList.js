@@ -32,6 +32,10 @@ const ItemList = props => {
         <span className="total-items">Total Junk: {garageItems.length}</span>
         <span className="items-type">{renderedItems}</span>
       </div>
+      <span class="sort-junk">
+        <span className="sort-header">Sort Yer Junk</span>
+        <span className="sort-button">{props.sortOrder}</span>
+      </span>
       <div className="item-container">{garageItems}</div>
       <AddItemForm addItem={addItem} />
     </div>

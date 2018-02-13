@@ -3,13 +3,13 @@ import ItemList from '../ItemList/ItemList';
 import './Garage.css';
 
 const Garage = (props) => {
-  const { items, isopen, addItem } = props;
+  const { items, isopen, addItem, sortOrder } = props;
   const doorClass = isopen === 'open' ? 'garage-door open' : 'garage-door closed';
 
   return (
     <div className="Garage">
       <div className={doorClass}></div>
-      <ItemList items={items} addItem={addItem}/>
+      <ItemList items={items} addItem={addItem} sortOrder={sortOrder}/>
     </div>
   );
 };
