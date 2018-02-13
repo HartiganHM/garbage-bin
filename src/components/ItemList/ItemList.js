@@ -4,7 +4,7 @@ import AddItemForm from '../AddItemForm/AddItemForm';
 import './ItemList.css';
 
 const ItemList = props => {
-  const { items, addItem } = props;
+  const { items, addItem, sortItems } = props;
 
   const garageItems = items.map((item, index) => (
     <Item key={index} data={item} />
@@ -34,7 +34,9 @@ const ItemList = props => {
       </div>
       <span class="sort-junk">
         <span className="sort-header">Sort Yer Junk</span>
-        <span className="sort-button">{props.sortOrder}</span>
+        <span onClick={() => sortItems()} className="sort-button">
+          {props.sortOrder}
+        </span>
       </span>
       <div className="item-container">{garageItems}</div>
       <AddItemForm addItem={addItem} />
