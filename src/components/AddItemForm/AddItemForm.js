@@ -16,10 +16,12 @@ class AddItemForm extends Component {
       <div className="AddItemForm">
         <div className="required-fields">
           <input
+            type="text"
             className="new-item-name form-item"
             placeholder="Enter a trash name"
           />
           <input
+            type="text"
             className="new-item-reason form-item"
             placeholder="Enter an excuse, hoarder"
           />
