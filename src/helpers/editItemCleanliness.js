@@ -1,7 +1,7 @@
 const editItemCleanliness = async (itemId, cleanliness) => {
   try {
     const editedItem = await fetch(
-      `http://localhost:3000/api/v1/garage-bin/${itemId}`,
+      `https://hugh-hartigan-gabage-bin.herokuapp.com/api/v1/garage-bin/${itemId}`,
       {
         method: 'PUT',
         body: JSON.stringify({ cleanliness }),

@@ -2,7 +2,7 @@ const createNewItem = async newItem => {
   try {
     const { name, reason, cleanliness } = newItem;
 
-    const addedItem = await fetch('http://localhost:3000/api/v1/garage-bin', {
+    const addedItem = await fetch('https://hugh-hartigan-gabage-bin.herokuapp.com/api/v1/garage-bin', {
       method: 'POST',
       body: JSON.stringify({
         name,
