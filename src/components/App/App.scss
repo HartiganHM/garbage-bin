@@ -1,3 +1,39 @@
-.App {
+@font-face {
+  font-family: 'SouthPark';
+  src: url('../../assets/south park.ttf');
+}
 
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: {
+    image: url('http://southparkstudios.mtvnimages.com/shared/locations/busstop.jpg');
+    repeat: no-repeat;
+    size: cover;
+  }
+  font-family: 'SouthPark', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  .app-header, .open-garage {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #F9F9F9;
+    border-radius: 5px;
+    background-color: #238C3D;
+    color: #F9F9F9;
+    font-size: 32px;
+  }
+  .open-garage {
+    background-color: #B9062A;
+    border-radius: 10px;
+    &:hover {
+      background-color: #CC4964;
+    }
+    &:active {
+      background-color: #76041B;
+    }
+  }
 }

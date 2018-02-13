@@ -1,0 +1,21 @@
+.ItemList {
+  display: flex;
+  flex-direction: column;
+  height: 755px;
+  margin: 22px;
+  .list-header {
+    align-self: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #8A5D23;
+    color: #201D1D;
+    font-size: 2.4rem;
+  }
+  .item-container {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.75);
+    overflow-y: scroll;
+  }
+}

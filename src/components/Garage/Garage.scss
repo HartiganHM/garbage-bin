@@ -1,0 +1,25 @@
+.Garage {
+  height: 800px;
+  width: 800px;
+  background: {
+    image: url('../../assets/garage-background.png');
+    repeat: no-repeat;
+    size: contain;
+  }
+  .garage-door {
+    position: absolute;
+    width: 780px;
+    margin: 10px;
+    background: {
+      image: url('../../assets/garage-door-tile.png');
+      size: contain;
+    }
+    transition: 0.5s height ease-in-out;
+  }
+  .closed {
+    height: 780px;
+  }
+  .open {
+    height: 0px;
+  }
+}

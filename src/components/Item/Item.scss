@@ -1,0 +1,21 @@
+.Item {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  color: #F9F9F9;
+  .item-name {
+    font-size: 24px;
+  }
+  .item-property {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .section-header {
+    font-size: 18px;
+    text-decoration: underline;
+  }
+}

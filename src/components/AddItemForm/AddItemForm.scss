@@ -1,0 +1,26 @@
+.AddItemForm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: darkgray;
+  .required-fields {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    .form-item {
+      flex: 1;
+      font-size: 14px;
+    }
+  }
+  .submit-button {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #87D1E2;
+    color: #F9F9F9;
+    font-size: 18px;
+  }
+}
