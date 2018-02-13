@@ -26,11 +26,11 @@ class App extends Component {
 
   addItemToGarage = (item) => {
     console.log(item)
-    // const newItem = item;
-    // const items = [...this.state.items, newItem];
+    const newItem = item;
+    const items = [...this.state.items, newItem];
 
     // createNewItem(newItem);
-    // this.setState({items})
+    this.setState({items});
   }
 
   render() {
