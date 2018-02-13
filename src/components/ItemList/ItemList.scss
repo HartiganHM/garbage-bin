@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 755px;
   margin: 22px;
+  background-color: rgba(0,0,0,0.65);
   .list-header {
     align-self: center;
     margin: 10px;
@@ -16,7 +17,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0,0,0,0.75);
     color: #F9F9F9;
     .total-items {
       padding: 10px;
@@ -33,7 +33,6 @@
     flex: 7;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0,0,0,0.75);
     overflow-y: scroll;
   }
 }
