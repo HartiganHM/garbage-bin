@@ -1,6 +1,6 @@
 const fetchItemById = async (itemId) => {
   try {
-    const fetchedItem = await fetch(`http://localhost:3000/api/v1/garage-bin/${itemId}`);
+    const fetchedItem = await fetch(`https://hugh-hartigan-gabage-bin.herokuapp.com/api/v1/garage-bin/${itemId}`);
     const jsonItem = await fetchedItem.json();
 
     return jsonItem;
