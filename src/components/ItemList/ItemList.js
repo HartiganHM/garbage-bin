@@ -3,7 +3,9 @@ import Item from '../Item/Item';
 import AddItemForm from '../AddItemForm/AddItemForm';
 import './ItemList.css';
 
-const ItemList = ({ items }) => {
+const ItemList = (props) => {
+  const { items, addItem } = props;
+
   const garageItems = items.map((item, index) => (
     <Item key={index} data={item} />
   ));
@@ -12,7 +14,7 @@ const ItemList = ({ items }) => {
     <div className="ItemList">
       <span className="list-header">Check Out Yer Junk!</span>
       <div className="item-container">{garageItems}</div>
-      <AddItemForm />
+      <AddItemForm addItem={addItem}/>
     </div>
   );
 };
