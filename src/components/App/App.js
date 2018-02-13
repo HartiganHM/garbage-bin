@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fetchAllItems from '../../helpers/fetchAllItems';
+import createNewItem from '../../helpers/createNewItem';
 import Garage from '../Garage/Garage';
 import './App.css';
 
@@ -21,6 +22,10 @@ class App extends Component {
     let isOpen = this.state.isOpen === 'closed' ? 'open' : 'closed';
 
     this.setState({isOpen})
+  }
+
+  addItemToGarage = (item) => {
+    
   }
 
   render() {
