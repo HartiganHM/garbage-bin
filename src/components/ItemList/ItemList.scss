@@ -11,6 +11,24 @@
     color: #201D1D;
     font-size: 2.4rem;
   }
+  .garage-count {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0,0,0,0.75);
+    color: #F9F9F9;
+    .total-items {
+      padding: 10px;
+      font-size: 18px;
+    }
+    .items-type {
+      align-self: stretch;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+  }
   .item-container {
     flex: 7;
     display: flex;

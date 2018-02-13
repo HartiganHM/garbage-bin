@@ -3,7 +3,7 @@ import Item from '../Item/Item';
 import AddItemForm from '../AddItemForm/AddItemForm';
 import './ItemList.css';
 
-const ItemList = (props) => {
+const ItemList = props => {
   const { items, addItem } = props;
 
   const garageItems = items.map((item, index) => (
@@ -14,24 +14,26 @@ const ItemList = (props) => {
     if (!itemsByType[item.cleanliness]) {
       itemsByType[item.cleanliness] = 0;
     }
-    itemsByType[item.cleanliness] ++;
+    itemsByType[item.cleanliness]++;
 
     return itemsByType;
-  }, {})
+  }, {});
 
-  const renderedItems = Object.keys(itemsByType).map(item => <span>{item}:{itemsByType[item]}</span>)
+  const renderedItems = Object.keys(itemsByType).map((item, index) => (
+    <span class="item-count" key={index}>
+      {item}:{itemsByType[item]}
+    </span>
+  ));
 
   return (
     <div className="ItemList">
       <span className="list-header">Check Out Yer Junk!</span>
       <div className="garage-count">
         <span className="total-items">Total Junk: {garageItems.length}</span>
-        <span className="items-type">
-          {renderedItems}
-        </span>
+        <span className="items-type">{renderedItems}</span>
       </div>
       <div className="item-container">{garageItems}</div>
-      <AddItemForm addItem={addItem}/>
+      <AddItemForm addItem={addItem} />
     </div>
   );
 };
